@@ -3,6 +3,7 @@ import { Box, Typography, Grid, Paper } from "@mui/material";
 import { motion } from "framer-motion";
 import Container from "./container/container";
 import React, { useEffect, useRef, useState } from "react";
+import Decor from "./form/Decor";
 
 const LocationSection = () => {
   const [isInView, setIsInView] = useState(false);
@@ -89,17 +90,10 @@ const LocationSection = () => {
   return (
     <Box
       id="location"
-      sx={
-        {
-          // py: 8,
-          // bgcolor: "#0e3b7c",
-        }
-      }
       className="bg-gradient-to-b relative text-white from-[#0f184c] to-[#0565a8]"
     >
-      <Box className="xl:w-[39%] md:w-full  lg:w-full w-[180%] lg:h-[75%] md:h-1/2 h-3/10 absolute right-0 bottom-0">
-        <img src="/decor1.png" className="w-full h-full " />
-      </Box>
+
+      <Decor number={1}/>
       <Container>
         <Box className="flex w-full lg:gap-x-[70px] flex-wrap lg:flex-nowrap justify-between mb-3 lg:mb-12 items-end">
           <Box className="mb-10 md:mb-0">
@@ -129,14 +123,14 @@ const LocationSection = () => {
             </Typography>
           </Box>
 
-          <p className="max-w-[633px] !lg:max-w-[433px]">
+          <p className="max-w-[633px] lg:w-1/2 !lg:max-w-[433px]">
             {/* <p className="!w-full"> */}
             Từ năm 2026, mọi trục động lực hạ tầng huyết mạch của miền Nam sẽ
             rút ngắn khoảng cách và thời gian đến Blanca City Vũng Tàu:
             {/* </p> */}
           </p>
         </Box>
-        <Box className="lg:grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-4 flex-wrap xl:flex-nowrap gap-3">
+        <Box className="md:grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 flex-wrap xl:flex-nowrap md:gap-x-[30px] lg:gap-y-3 ">
           {transportOptions.map((option, idx) => (
             <Box
               style={{
@@ -145,7 +139,7 @@ const LocationSection = () => {
                 backgroundRepeat: "no-repeat",
                 backgroundSize: "cover",
               }}
-              className=" !lg:w-1/2 mt-4 border border-solid border-[#f08daf] lg:mt-0 !xl:w-1/4 w-full rounded-xl overflow-hidden duration-500 hover:translate-y-[-10px]"
+              className=" !lg:w-1/2 mt-4 md:min-h-[308px] min-h-[300px] border border-solid border-[#f08daf] lg:mt-0 !xl:w-1/4 w-full rounded-xl overflow-hidden duration-500 hover:translate-y-[-10px]"
               key={idx}
             >
               <Paper
@@ -156,9 +150,9 @@ const LocationSection = () => {
                 viewport={{ once: true }}
                 sx={{
                   bgcolor: "rgba(255,255,255,0.8)",
-                  height: "100%",
+                  // height: "100%",
                 }}
-                className="rgba(255,255,255,0.1) lg:p-[24px] lg:pb-[60px] p-[20px] pb-[60px]"
+                className="rgba(255,255,255,0.1) md:min-h-[308px] min-h-[300px] lg:p-[24px] lg:pb-[60px] p-[20px] pb-[60px]"
               >
                 <Typography
                   className="!mb-2 !font-semibold"

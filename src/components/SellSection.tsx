@@ -75,7 +75,7 @@ const SellSection = () => {
   return (
     <Box
       id="price"
-      className="bg-gradient-to-b text-white from-[#12194f] to-[#0764a6]"
+      className=" text-white "
     >
       <Container className="flex flex-col-reverse lg:flex-row justify-between items-center gap-x-7">
         <Box className="lg:w-1/2 w-full text-[#E3E3E3]">
@@ -94,20 +94,34 @@ const SellSection = () => {
               variant="body1"
               sx={{ mb: 2, fontSize: "1.1rem", lineHeight: 1.8 }}
             >
-              Cơ hội sở hữu các sản phẩm trong “biểu tượng mới” của Sun Group
-              tại Siêu đô thị TPHCM với giá tốt nhịp đầu khoảng
-              {/* <span
-          style={{ fontFamily: "Newsreader", lineHeight: 1 }}
-          className="mx-1 text-[24px] !leading-none font-semibold bg-gradient-to-r from-[#d02d63] to-[#f08eaf] bg-clip-text text-transparent"
-        >
-       2,8 tỷ/căn
-        </span> */}
-              <GradientText text="2,8 tỷ/căn" />
-              view biển & full nội thất.
+              <strong>
+                Cơ hội sở hữu các sản phẩm "biểu tượng" đầu tiên của Sun Group
+                tại TP HCM. Giá tốt nhất nhịp 1:
+              </strong>
+
+              {/* <GradientText text="2,8 tỷ/căn" />
+              view biển & full nội thất. */}
             </Typography>
           </Box>
 
           {[
+            {
+              label: (
+                <Box className="flex flex-col">
+                  <span>
+                    Căn hộ biển full nội thất: Từ{" "}
+                    <GradientText text="2,8 tỷ/căn" />
+                  </span>
+                  <span className="-ml-4 mt-2">
+                    <span className="mr-1 text-secondary text-[#e16a92]">
+                      ⬘
+                    </span>
+                    Nhà phố, biệt thự biển sở hữu lâu dài: Từ{" "}
+                    <GradientText text="22,5 tỷ/căn" />
+                  </span>
+                </Box>
+              ),
+            },
             {
               label: (
                 <span>
@@ -134,6 +148,17 @@ const SellSection = () => {
                 </span>
               ),
             },
+            {
+              label: (
+                <span className="w-full flex-1">
+                  Duy nhất tháng này, ưu đãi tặng vé{" "}
+                  <GradientText text="5 năm" /> tại công viên nước
+                  <GradientText text="Sun World," />
+                  áp dụng đến 4 người.
+                </span>
+              ),
+            },
+            
           ].map((item, index) => (
             <InfoItem key={index} label={item.label} className={"flex"} />
           ))}

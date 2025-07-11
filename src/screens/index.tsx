@@ -8,7 +8,7 @@ import { IFrameMap } from "@/components/IFrameMap";
 import IntroSection from "@/components/IntroSection";
 import LocationSection from "@/components/LocationSection";
 import OverviewSection from "@/components/OverviewSection";
-import ProductsSection from "@/components/ProductsSection";
+import ProductsSectionV2 from "@/components/ProductsSectionV2";
 import SunGroupSection from "@/components/SunGroupSection";
 import { Box, Grid } from "@mui/material";
 import React from "react";
@@ -22,12 +22,15 @@ import HeaderForm from "@/components/HeaderForm";
 import Link from "next/link";
 import SellSection from "@/components/SellSection";
 import SuccessOverlay from "@/components/form/SuccesdOverlay";
+import OverviewSectionV2 from "@/components/OverviewSectionV2";
+import AutoPlayYoutube from "@/components/Video";
 // import AgencySection from "@/components/AgencySection";
 
 export const MainPage: React.FC = () => {
   return (
     <Box className="relative">
       {/* <Box> */}
+      {/* <canvas width="1100" height="500" className="BlackholeCta_canvas-starfield__ArD7F"></canvas> */}
 
       <Box id="#hero" className="max-w-[1920px] relative mx-auto w-full">
         <Box className="w-full relative">
@@ -35,9 +38,12 @@ export const MainPage: React.FC = () => {
             {/* <HeaderForm /> */}
           </Box>
           <BannerComponent
-            img="/hero1.jpg"
-            imgTablet="/hero1-tablet.jpg"
-            imgMb="/hero1-mb.webp"
+            // img="/hero1.jpg"
+            // imgTablet="/hero1-tablet.jpg"
+            // imgMb="/hero1-mb.webp"
+            img="/hero7.jpg"
+            imgTablet="/hero7.jpg"
+            imgMb="/hero7.jpg"
           />
           <Link
             href="#intro"
@@ -50,7 +56,7 @@ export const MainPage: React.FC = () => {
         </Box>
       </Box>
       <Header />
-      {/* <Grid size={{ xs: 12 }}></Grid> */}
+
       <Grid size={{ xs: 12 }}>
         <Box>
           <HeroSection />
@@ -59,7 +65,7 @@ export const MainPage: React.FC = () => {
       <Grid size={{ xs: 12 }} id="intro">
         <Box
           className="
-          mt-[-56px] md:mt-[-100px] lg:mt-[-160px] !xl:mt-[-200px] relative z-[2]"
+          mt-[0px] md:mt-[0px] lg:mt-[-20px] !xl:mt-[-200px] relative z-[2]"
         >
           <IntroSection />
         </Box>
@@ -75,9 +81,7 @@ export const MainPage: React.FC = () => {
         <MapAddressSection />
       </Grid>
 
-      <Grid size={{ xs: 12 }}>
-        {" "}
-        {/*video */}
+      {/* <Grid size={{ xs: 12 }}>
         <VideoSlider
           videos={[
             {
@@ -89,7 +93,7 @@ export const MainPage: React.FC = () => {
             },
           ]}
         />
-      </Grid>
+      </Grid> */}
       {/* <Grid size={{ xs: 12 }}>
         {" "}
         <ReceiveInformationSection
@@ -99,7 +103,7 @@ export const MainPage: React.FC = () => {
       </Grid> */}
       <Grid size={{ xs: 12 }}>
         <Box>
-          <OverviewSection />
+          <OverviewSectionV2 />
         </Box>
       </Grid>
       <Grid size={{ xs: 12 }}>
@@ -109,9 +113,12 @@ export const MainPage: React.FC = () => {
       </Grid>
       <Grid size={{ xs: 12 }}>
         <BannerComponent
-          img="/hero-release.jpg"
-          imgTablet="/hero-release.jpg"
-          imgMb="/hero-release.jpg"
+          // img="/hero-release.jpg"
+          // imgTablet="/hero-release.jpg"
+          // imgMb="/hero-release.jpg"
+          img="/casa.png"
+          imgTablet="/casa.png"
+          imgMb="/casa.png"
         />
       </Grid>
       <Grid size={{ xs: 12 }}>
@@ -122,12 +129,13 @@ export const MainPage: React.FC = () => {
               style={{ fontFamily: "Newsreader", fontWeight: 800 }}
               className="flex !font-[800] text-[24px] text-whote flex-col gap-y-1"
             >
-              <p className="!font-[700]">
-                Quý Anh/Chị điền thông tin bên dưới để nhận tư vấn chi tiết về
+              <p className="!font-[700] uppercase">
+                THAM QUAN SA BÀN BLANCA CITY
               </p>
 
               <p className="!font-[700]">
-                "Tư vấn tiềm năng đô thị biển Blanca City by Sun Group."
+                *Quý Anh/Chị điền thông tin bên dưới để chuyên viên hỗ trợ đặt
+                lịch & tư vấn chi tiết sản phẩm nhé!
               </p>
             </div>
           }
@@ -138,8 +146,8 @@ export const MainPage: React.FC = () => {
         <TotalAreaSection />
       </Grid>
       <Grid size={{ xs: 12 }}>
-        <Box id="products">
-          <ProductsSection />
+        <Box id="products" className="xl:pt-[60px] xl:pb-[120px] bg-white">
+          <ProductsSectionV2 />
         </Box>
       </Grid>
       <Grid size={{ xs: 12 }}>
@@ -151,12 +159,12 @@ export const MainPage: React.FC = () => {
       </Grid>
 
       <Grid size={{ xs: 12 }}>
-        <Box>
+        <Box className="xl:pt-[60px] xl:pb-[120px] bg-white">
           <DesignSection />
         </Box>
       </Grid>
       <Grid size={{ xs: 12 }}>
-        <Box>
+        <Box id="sell" className="xl:pt-[60px] xl:pb-[60px] bg-gradient-to-b  from-[#12194f] to-[#0764a6]">
           <SellSection />
         </Box>
       </Grid>
@@ -170,7 +178,11 @@ export const MainPage: React.FC = () => {
           <AgencySection />
         </Box>
       </Grid> */}
-
+      <Grid size={{ xs: 12 }}>
+        <Box className="mt-10">
+          <AutoPlayYoutube />
+        </Box>
+      </Grid>
       <Grid size={{ xs: 12 }}>
         <CommentSection />
       </Grid>
@@ -184,22 +196,18 @@ export const MainPage: React.FC = () => {
         <ReceiveInformationSection
           text={
             <div
-              style={{ fontFamily: "Newsreader",}}
+              style={{ fontFamily: "Newsreader" }}
               className="flex !font-bold  text-whote flex-col gap-y-1"
             >
               <p className="!font-[700] mb-4">
                 <strong>
-                Quý khách đừng ngần ngại liên hệ để nhận tư vấn chi tiết nhất về dự án Blanca City by Sun Group
-
-
+                  Quý khách đừng ngần ngại liên hệ để nhận tư vấn chi tiết nhất
+                  về dự án Blanca City by Sun Group
                 </strong>
               </p>
 
               <p className="!font-[700] italic">
-              Cam kết thông tin uy tín nhất từ Đại lý TOP 1 của Chủ đầu tư!
-
-
-
+                Cam kết thông tin uy tín nhất từ Đại lý TOP 1 của Chủ đầu tư!
               </p>
             </div>
           }

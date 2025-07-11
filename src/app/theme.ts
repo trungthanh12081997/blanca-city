@@ -64,7 +64,7 @@ let theme = createTheme({
         root: {
           borderRadius: 4,
           textTransform: "none",
-          fontWeight: 500,
+          // fontWeight: 500,
         },
         contained: {
           boxShadow: "none",

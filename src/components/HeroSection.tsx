@@ -17,9 +17,12 @@ const HeroSection = () => {
       }}
     >
       <BannerComponent
-        img="/components/hero/hero.jpg"
-        imgTablet="/components/hero/hero.jpg"
-        imgMb="/components/hero/hero-mb.jpg"
+        // img="/components/hero/hero.jpg"
+        // imgTablet="/components/hero/hero.jpg"
+        // imgMb="/components/hero/hero-mb.jpg"
+        img="/hero8.png"
+        imgTablet="/hero8.png"
+        imgMb="/hero8-mb.png"
       />
       {/* <Container maxWidth="lg">
         <Box

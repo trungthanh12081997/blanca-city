@@ -57,10 +57,10 @@ const SunGroupSection = () => {
         <Box className="flex flex-col lg:flex-row gap-y-4 lg:gap-x-2">
           {[
             "/SunGroup/sungroup01.webp",
-            "/SunGroup/sungroup02.webp",
             "/SunGroup/sungroup03.webp",
-            "/SunGroup/sungroup04.webp",
+            "/SunGroup/sungroup02.webp",
             "/SunGroup/sungroup05.webp",
+            "/SunGroup/sungroup04.webp",
           ].map((imgSrc, index) => (
             <Box sx={{ borderRadius: "10px", overflow: "hidden" }} key={index}>
               <ImageComponent img={imgSrc} />

@@ -5,6 +5,7 @@ import { motion } from "framer-motion";
 import Container from "./container/container";
 import Gallery from "./form/Gallery";
 import { useState } from "react";
+import Decor from "./form/Decor";
 
 const HighlightsSection = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -18,7 +19,6 @@ const HighlightsSection = () => {
     <Box
       id="highlights"
       sx={{
-        py: 8,
         bgcolor: "#ffffff",
         color: "#10184C",
       }}
@@ -36,9 +36,9 @@ const HighlightsSection = () => {
         openSlider={(index: number) => handleOpen(index)}
         images={["/light1.jpg", "/light4.jpg", "/light3.jpg"]}
       />
-      <Box className="xl:w-[39%] md:w-full  lg:w-full w-[180%] lg:h-[75%] md:h-1/2 h-3/10 absolute right-0 bottom-0">
-        <img src="/decor2.png" className="w-full h-full " />
-      </Box>
+   
+      <Decor number={2}/>
+
       <Container className="text-[#10184C] font-[500]">
         <Box className="mb-10 md:mt-0">
           <motion.div

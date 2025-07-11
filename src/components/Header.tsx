@@ -21,6 +21,8 @@ HeaderProps) => {
     { label: "Thiết kế", id: "design" },
     { label: "GIÁ & CSBH", id: "price" },
     { label: "Sun Group", id: "sungroup" },
+    { label: "ĐẠI LÝ CHIẾN LƯỢC", id: "sell" },
+
   ];
 
   useEffect(() => {

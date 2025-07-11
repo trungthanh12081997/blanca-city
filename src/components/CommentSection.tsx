@@ -140,17 +140,53 @@ export type CommentFormType = z.infer<typeof commentSchema>;
 export const CommentSection = () => {
   const comment = [
     {
-      name: "Đào Văn Cảnh",
-      phone: "[0903***175]",
-      comment: "Bảng giá đất và nhà",
-      time: "2 tháng trước",
+      name: "HÀ CHÂU",
+      phone: "[0938***823]",
+      comment: "TÔI CẦN MUA CĂN 2PN",
+      time: "1 ngày trước",
       avatar: "https://secure.gravatar.com/avatar/?s=50&d=mm&r=g",
       subComment: [
         {
           avatar:
             "https://secure.gravatar.com/avatar/82773059d5c248c27a64a2baba276269?s=50&d=mm&r=g",
-          name: "Tuy Nhu",
-          time: "2 tháng trước",
+          name: "Duy Nguyen",
+          time: "1 ngày trước",
+          comment:
+            "Cảm ơn thông tin của anh chị, chuyên viên tư vấn sẽ kết nối hỗ trợ chi tiết dự án đến anh chị nhé ạ",
+          title: "CSKH",
+        },
+      ],
+    },
+    {
+      name: "Nguyễn Văn Tùng [0983***045]",
+      phone: "[0983***045]",
+      comment: "giới thiệu dự án",
+      time: "1 tuần trước",
+      avatar: "https://secure.gravatar.com/avatar/?s=50&d=mm&r=g",
+      subComment: [
+        {
+          avatar:
+            "https://secure.gravatar.com/avatar/82773059d5c248c27a64a2baba276269?s=50&d=mm&r=g",
+          name: "Duy Nguyen",
+          time: "1 tuần trước",
+          comment:
+            "Cảm ơn thông tin của anh chị, chuyên viên tư vấn sẽ kết nối hỗ trợ chi tiết dự án đến anh chị nhé ạ",
+          title: "CSKH",
+        },
+      ],
+    },
+    {
+      name: "thu hà",
+      phone: "[0389***531]",
+      comment: "Tư vấn thêm thông tin",
+      time: "1 tuần trước",
+      avatar: "https://secure.gravatar.com/avatar/?s=50&d=mm&r=g",
+      subComment: [
+        {
+          avatar:
+            "https://secure.gravatar.com/avatar/82773059d5c248c27a64a2baba276269?s=50&d=mm&r=g",
+          name: "Duy Nguyen",
+          time: "1 tuần trước",
           comment:
             "Cảm ơn thông tin của anh chị, chuyên viên tư vấn sẽ kết nối hỗ trợ chi tiết dự án đến anh chị nhé ạ",
           title: "CSKH",
